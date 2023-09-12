@@ -4,7 +4,5 @@ with open(r'C:\Users\danie\OneDrive\Visual Studio\learning-python\NeverStink1.3.
     for line in filter1:
         if line.startswith('#'):
             continue
-        line = line.rstrip()
-        filter2.write(line)
-
-filter2.close()
+        else:
+            filter2.writelines([line])
