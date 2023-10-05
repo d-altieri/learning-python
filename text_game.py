@@ -8,15 +8,27 @@ player = {
 }
 
 weapons = {
-    1: {"name": "sword", "damage": 10},
-    2: {"name": "axe", "damage": 15},
-    3: {"name": "mace", "damage": 20}
+    1: {"name": "sword",
+        "damage": 10},
+
+    2: {"name": "axe",
+        "damage": 15},
+
+    3: {"name": "mace",
+        "damage": 20}
 }
 
 enemies = {
-    1: {"name": "skeleton", "health": 20, "damage": 1},
-    2: {"name": "zombie", "health": 25, "damage": 1},
-    3: {"name": "swarm", "damage": 20}
+    1: {"name": "skeleton",
+        "health": 20,
+        "damage": 1},
+
+    2: {"name": "zombie",
+        "health": 25,
+        "damage": 1},
+
+    3: {"name": "swarm",
+        "damage": 20}
 }
 
 weapon_choice_strings = [f"{number}) {weapon['name']}" for number, weapon in weapons.items()]
