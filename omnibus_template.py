@@ -12,6 +12,7 @@ while number_of_sites > 0:
     nest_output.append(f'{hubs}')
     for sector in sectors:
         output.append(f'{hubs}_{sector}1LAB - 2100 | 1900 | LAA')
+        nest_output.append(f'{hubs}_{sector}1LAB')
         continue
     output.append('')
     number_of_sites -= 1
