@@ -1,19 +1,11 @@
-import requests
-from html.parser import HTMLParser
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-class MyHTMLParser(HTMLParser):
-    def handle_starttag(self, tag, attrs):
-        print(f'<{tag}> - {attrs}')
+driver = webdriver.Edge()
 
-    def handle_endtag(self, tag):
-        print(f'<{tag}>')
+driver.get("https://poedb.tw/us/Vendor_recipe_system")
+page = driver.find_element(By.TAG_NAME, value="tr")
+print(page.text)
+driver.implicitly_wait(4.0)
 
-    def handle_data(self, data):
-        print(data)
-
-
-parser = MyHTMLParser()
-
-parser.feed("""
-"""
-)
+driver.quit()
