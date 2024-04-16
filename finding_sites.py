@@ -1,12 +1,14 @@
 import re
 
-text = '''T3LA1051 / LA0406BA_31LAB|TMB_CA_ExpoPark(LA02594A)_01(Small Cell)
+text = '''
 '''
 
-
 lines = text.splitlines()
-re_pattern = r"/\w{8}_/\d{2}LAB"
-compiled_re_pattern = re.compile(re_pattern)
+pattern = r"\w{8}_\d{2}LAB"
+match = re.findall(pattern, text)
+result = sorted(match)
 
-
-print(compiled_re_pattern)
+if match:
+    print(*result, sep="\n")
+else:
+    print("No equipment found")
